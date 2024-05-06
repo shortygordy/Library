@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="grid-container">
+        <nav>
+            <div id="title">
+                <img src="./images/library-icon.png" alt="library icon">
+                <p class="nav-text">Library Organizer</p>
+            </div>
+
+            <div id="sections">
+                <div class="section">
+                    <img src="./images/books-icon.png" alt="Books">
+                    <button class="nav-text add-book"> + Add Book</button>
+                </div>
+
+                <div class="section">
+                    <img src="./images/books-icon.png" alt="Books">
+                    <button class="nav-text"> - Remove Book</button>
+                </div>
+
+                <div class="section">
+                    <img src="./images/settings-icon.png" alt="Books2">
+                    <button class="nav-text">Settings</button>
+                </div>
+
+
+
+            </div>
+        </nav>
+
+        <div id="main-window">
+            <div id="profile-controls">
+                <div id="left-side">
+                    Search Bar Area
+                </div>
+
+
+            </div>
+
+            <div id="books">
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright 2024 GORDI</p>
+        </footer>
+    </div>
+    <div class="overlay"></div>
+    <div id="add-book-menu">
+
+        <button class="menu-close-button">X</button>
+        <form action="" class="form">
+            <label for="book-title" class="book-title"></label>
+            <input type="text" id="book-title" class="book-title" placeholder="Title" required>
+
+            <label for="author" class="author"></label>
+            <input type="text" id="author" class="author" placeholder="Author" required>
+
+            <label for="pages" class="pages"></label>
+            <input type="number" min="1" id="pages" class="pages" placeholder="Pages" required>
+            <div class="switch-container">
+                <p>Mark as read:</p>
+                <input type="checkbox" class="checkbox" id="toggle">
+                <label for="toggle" class="switch"></label>
+            </div>
+
+            <button type="submit" class="button submit-book" id="submit-book">Add Book</button>
+        </form>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

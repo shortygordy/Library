@@ -10,50 +10,36 @@
 </head>
 
 <body>
-    <div id="grid-container">
-        <nav>
+
+    <div id="main-window">
+        <div id="profile-controls">
             <div id="title">
                 <img src="./images/library-icon.png" alt="library icon">
                 <p class="nav-text">Library Organizer</p>
             </div>
 
             <div id="sections">
-                <div class="section">
+                <div class="section add-book">
                     <img src="./images/books-icon.png" alt="Books">
-                    <button class="nav-text add-book"> + Add Book</button>
+                    <button class="nav-text"> + Add Book</button>
                 </div>
 
-                <div class="section">
-                    <img src="./images/books-icon.png" alt="Books">
-                    <button class="nav-text"> - Remove Book</button>
-                </div>
-
-                <div class="section">
+                <div class="section settings">
                     <img src="./images/settings-icon.png" alt="Books2">
                     <button class="nav-text">Settings</button>
                 </div>
 
 
-
-            </div>
-        </nav>
-
-        <div id="main-window">
-            <div id="profile-controls">
-                <div id="left-side">
-                    Search Bar Area
-                </div>
-
-
             </div>
 
-            <div id="books">
-            </div>
         </div>
 
-        <footer>
+        <div id="books">
+        </div>
+
+        <!-- <footer>
             <p>Copyright 2024 GORDI</p>
-        </footer>
+        </footer>-->
     </div>
     <div class="overlay"></div>
     <div id="add-book-menu">
@@ -76,7 +62,6 @@
 
             <button type="submit" class="button submit-book" id="submit-book">Add Book</button>
         </form>
-    </div>
 </body>
 <script src="./script.js"></script>
 

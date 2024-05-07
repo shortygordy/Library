@@ -6,117 +6,102 @@ body {
 
 body {
     background-color: rgb(57, 73, 78);
-    overflow: hidden;
-}
-
-#grid-container {
-    display: grid;
-    grid-template-columns: 16rem 1fr;
-    grid-template-rows: 1fr auto;
-    height: 100%;
-    max-width: 1200px;
-    width: 100%;
-    transition: all .2s;
-    margin: 0 auto;
 }
 
 .blur {
     filter: blur(5px);
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    background-color: rgb(94, 120, 129);
-    z-index: 1;
+.section>button {
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
-#title {
-    padding: 10px;
-}
-
-#title,
-.section {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-}
-
-#title img {
-    width: 100%;
+.add-book,
+.settings {
+    text-align: left;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
 }
 
 #sections {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    gap: 30px;
+    padding: 20px;
 }
 
 .section {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    justify-self: center;
+    background-color: rgb(113, 143, 154);
+    border-radius: 15px;
     transition: all .3s;
-    cursor: pointer;
+}
+
+.section:hover {
+    background-color: rgb(133, 164, 175);
+    border-radius: 15px;
 }
 
 .section img {
     width: 50%;
-    justify-self: center;
     align-self: center;
-    user-select: none;
-}
-
-.section:hover {
-    background-color: rgb(113, 143, 154);
-}
-
-.section>button {
-    padding: 10px;
-    border: none;
-    background: none;
-    text-align: left;
-    cursor: pointer;
-}
-
-#title .nav-text {
-    font-weight: 600;
-    font-size: 1.2rem;
+    justify-self: center;
+    filter: invert();
 }
 
 .nav-text {
-    color: white;
-    margin: 0;
-    padding-left: 5%;
-    align-self: center;
+    color: black;
+    font-weight: 600;
+    text-wrap: nowrap;
     user-select: none;
-}
-
-.section .nav-text {
-    padding-left: 10px;
 }
 
 #main-window {
     display: grid;
-    grid-template-rows: 5rem 1fr;
+    grid-template-rows: 100px 1fr;
     text-align: center;
     overflow-y: scroll;
-    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #profile-controls {
     box-shadow: rgb(148, 148, 148) 0px 1px 5px;
     background-color: rgb(196, 212, 217);
-    position: sticky;
-    top: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-row: 1;
 }
 
-#right-side {
+#title {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 50px 200px;
+    grid-column: 1;
+    justify-content: start;
+    align-content: center;
+    gap: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#title img {
+    width: 100%;
+    align-self: center;
+    filter: invert();
+}
+
+#title>.nav-text {
+    font-size: 1.7em;
+    line-height: 0%;
 }
 
 #books {
-    z-index: -1;
+    grid-row: 2;
     background-color: rgb(147, 168, 172);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -361,7 +346,6 @@ input {
 
 footer {
     color: white;
-    grid-column: span 2;
     text-align: center;
     background-color: rgb(82, 94, 100);
     z-index: 2;

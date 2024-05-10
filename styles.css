@@ -37,13 +37,13 @@ body {
     display: grid;
     grid-template-columns: 50px 1fr;
     justify-self: center;
-    background-color: rgb(113, 143, 154);
+    background-color: #7983ff;
     border-radius: 15px;
     transition: all .3s;
 }
 
 .section:hover {
-    background-color: rgb(133, 164, 175);
+    background-color: rgb(100, 165, 255);
     border-radius: 15px;
 }
 
@@ -51,7 +51,6 @@ body {
     width: 50%;
     align-self: center;
     justify-self: center;
-    filter: invert();
 }
 
 .nav-text {
@@ -59,6 +58,10 @@ body {
     font-weight: 600;
     text-wrap: nowrap;
     user-select: none;
+}
+
+button.nav-text {
+    color: #fff;
 }
 
 #main-window {
@@ -72,10 +75,11 @@ body {
 
 #profile-controls {
     box-shadow: rgb(148, 148, 148) 0px 1px 5px;
-    background-color: rgb(196, 212, 217);
+    background-color: #fff;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-row: 1;
+    z-index: 0;
 }
 
 #title {
@@ -102,11 +106,11 @@ body {
 
 #books {
     grid-row: 2;
-    background-color: rgb(147, 168, 172);
+    background-color: #fff;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 40px;
 }
 
 .no-scroll {
@@ -124,7 +128,7 @@ body {
 }
 
 .book {
-    background-color: rgb(147, 56, 56);
+    background-color: rgb(213, 213, 213);
     border-radius: 15px;
     border-left: solid rgb(88, 28, 28) 15px;
     user-select: none;
@@ -136,13 +140,17 @@ body {
 
 .book-text {
     display: grid;
-    color: white;
+    color: black;
     grid-template-rows: 55px 75px 55px 55px 55px;
 }
 
-.book-text p:nth-child(1) {
+.book-text>p:nth-child(1) {
     grid-row: 1;
     align-self: center;
+    background-color: #7982ff2b;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 800;
 }
 
 .book-text p:nth-child(2) {
@@ -177,7 +185,7 @@ body {
     position: fixed;
     top: 0;
     right: -500px;
-    background-color: rgb(94, 120, 129);
+    background-color: #e7e7e7;
     height: 100vh;
     padding: 20px;
     padding-top: 10px;
@@ -187,17 +195,16 @@ body {
 svg {
     justify-self: center;
     align-self: center;
-    fill: white;
     transition: all .2s;
 }
 
 svg:hover {
-    fill: #96b6ff;
+    fill: #7983ff;
     cursor: pointer;
 }
 
 svg:active {
-    fill: #b9cdfa;
+    fill: #9aa1ff;
 }
 
 .form {
@@ -216,11 +223,11 @@ svg:active {
     transition: all .2s;
     cursor: pointer;
     user-select: none;
-    color: white;
+    color: black;
 }
 
 .menu-close-button:hover {
-    color: rgb(215, 215, 215);
+    color: rgb(122, 122, 122);
 }
 
 .menu-close-button:active {
@@ -282,7 +289,7 @@ input {
     justify-self: center;
     text-wrap: nowrap;
     font-weight: 600;
-    color: white;
+    color: black;
 }
 
 .switch {
@@ -333,15 +340,16 @@ input {
     justify-self: center;
     align-self: center;
     padding: 10px 20px 10px 20px;
-    background-color: lightblue;
+    background-color: #7983ff;
     transition: all .3s;
     font-weight: 600;
+    color: #fff;
 }
 
 .submit-book:hover {
     cursor: pointer;
     user-select: none;
-    background-color: rgb(191, 225, 236);
+    background-color: #969dff;
 }
 
 footer {

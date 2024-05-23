@@ -87,6 +87,7 @@ body {
     width: 50%;
     align-self: center;
     justify-self: center;
+    user-select: none;
 }
 
 .section.theme {
@@ -159,6 +160,7 @@ button.nav-text {
     width: 100%;
     align-self: center;
     filter: var(--title-invert);
+    user-select: none;
 }
 
 #title>.nav-text {

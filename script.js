@@ -140,30 +140,53 @@ function updateDOM() {
 
 function showMenu() {
     menu.classList.add('show-menu');
-    books.classList.add('no-scroll');
+    body.classList.add('no-scroll');
     mainPage.classList.add('blur');
     overlay.classList.add('show-overlay');
 }
 
 function hideMenu() {
     menu.classList.remove('show-menu')
-    books.classList.remove('no-scroll');
+    body.classList.remove('no-scroll');
     mainPage.classList.remove('blur');
     overlay.classList.remove('show-overlay');
     form.reset();
 }
 
+function toggleTheme() {
+    //if class list does not contain dark, add dark
+    if (themeButton.classList.contains("light")) {
+        themeButton.classList.remove("light");
+        themeButton.classList.add("dark");
+        root.classList.remove("light");
+        root.classList.add("dark");
+
+    } else {
+        themeButton.classList.remove("dark");
+        themeButton.classList.add("light");
+        root.classList.remove("dark");
+        root.classList.add("light");
+    }
+
+}
+
 initializeDOM();
 
-const mainPage = document.getElementById('grid-container');
+const body = document.body;
+const mainPage = document.getElementById('main-window');
 const menu = document.getElementById('add-book-menu');
 const overlay = document.querySelector('.overlay');
 const menuCloseButton = document.querySelector(".menu-close-button");
+const themeButton = document.querySelector(".theme");
 const addBookButton = document.querySelector(".add-book");
 const submitButton = document.querySelector("#submit-book");
 const form = document.querySelector("form");
+const root = document.documentElement;
 
+root.classList.add('light');
+themeButton.classList.add('light');
 addBookButton.addEventListener("click", showMenu);
 menuCloseButton.addEventListener("click", hideMenu);
 overlay.addEventListener("click", hideMenu);
-submitButton.addEventListener("click", addBookToLibrary)
+themeButton.addEventListener("click", toggleTheme);
+submitButton.addEventListener("click", addBookToLibrary);
